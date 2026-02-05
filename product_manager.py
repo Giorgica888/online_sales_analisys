@@ -31,6 +31,7 @@ class ProductManager:
         for i in self.product_list:
             if i.name == product_name:
                 self.product_list.remove(i)
+                self.id_set.remove(i.id)
                 return
             
         if self.product_list:
