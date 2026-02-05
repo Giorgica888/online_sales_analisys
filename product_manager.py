@@ -27,11 +27,26 @@ class ProductManager:
             the_sum += i.price * i.quantity
         print(f"Total price : {the_sum}")
 
+    def remove_product(self, product_name : str):
+        for i in self.product_list:
+            if i.name == product_name:
+                self.product_list.remove(i)
+                return
+            
+        if self.product_list:
+            print("Product does not exist in the list")
+        else:
+            print("The list is empty")
+
     def id_markup(self):
         for i in self.product_list:
             self.id_set.add(i.id)
-    
+
+#Direct Test Place  
 # maneger = ProductManager([Product("masian", 100, 10), Product("caruta", 20, 10)])
 # maneger.add_product(Product("tir", 22, 10))
 
-# maneger.print_products(pretty_printing=True)
+# maneger.show_products(pretty_printing=True)
+
+# maneger.remove_product("masian")
+# maneger.show_products(pretty_printing=True)
