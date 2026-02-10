@@ -17,3 +17,5 @@ for i in range(3):
     shopping_cart.add_product(manager.product_list[i])
 print(f"The total pay amount is {shopping_cart.sum_of_products()}")
 shopping_cart.show_products(pretty_printing=True)
+shopping_cart.add_product(shopping_cart.product_list[1])
+shopping_cart.show_products(pretty_printing=True)
